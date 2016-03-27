@@ -5,7 +5,7 @@ if not fs.exists("startup") then
 end
 modem = peripheral.wrap("back")
 state = "locked"
-version = "Pre160311-2302"
+version = "Pre160327-OPNSRC"
 connecting = false
 quit = false
 defaultcolor = colors.gray
@@ -143,22 +143,8 @@ end
 
 update = function()
   connecting = true
-  if fs.exists("startup") then
-    download("https://www.dropbox.com/s/k15800l0dkhirmo/startup?dl=1","startup")
-  end
-  download("https://www.dropbox.com/s/6exvxj3l60vs8r5/os.lua?dl=1","pocke/os.lua")
-  download("https://www.dropbox.com/s/hbmt6bf1tjl8z4z/settings?dl=1","pocke/api/settings")
-  --download("http://pastebin.com/raw/RYKHrp1d","test")
-  download("https://www.dropbox.com/s/rxxg8cxhoe83h2o/edge?dl=1","pocke/api/edge")
-  download("https://www.dropbox.com/s/48ca6yjrsecsnd7/crash?dl=1","pocke/user/crash")
-  download("https://www.dropbox.com/s/i18p42ph8blylfm/settings.cfg?dl=1","pocke/settings.cfg")
-  download("https://www.dropbox.com/s/ed57owqqjp53l57/installer?dl=1","pocke/user/updater")
-  if connecting == "error" then
-    edge.log("Update failed.")
-  else
-    connecting = false
-  end
-
+  sleep(1)
+  connecting = "error"
 end
 time = function()
   while(true) do
