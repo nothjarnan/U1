@@ -27,3 +27,5 @@ Lead programming - Nothy
 Settings API - Vick
 
 Contact email: nothjarnan.TheLolzGuys@gmail.com (cringe-worthy, I know.)
+
+Copyright (c) 2016 Linus Ramneborg 
